@@ -14,7 +14,7 @@ public class CoinManager : MonoBehaviour
     // Called when the script instance is being loaded
     private void Awake()
     {
-        
+
         LoadCoins();
     }
 
@@ -23,15 +23,15 @@ public class CoinManager : MonoBehaviour
     {
         Totalcoins += 5;
         UpdateCoinText();
-        SaveCoins(); 
+        SaveCoins();
     }
 
-    
+
     public void DecreaseCoins(float amount)
     {
         Totalcoins -= amount;
         UpdateCoinText();
-        SaveCoins(); 
+        SaveCoins();
     }
 
     private void UpdateCoinText()
@@ -42,7 +42,7 @@ public class CoinManager : MonoBehaviour
     private void SaveCoins()
     {
         PlayerPrefs.SetFloat(CoinSaveKey, Totalcoins);
-        PlayerPrefs.Save(); 
+        PlayerPrefs.Save();
     }
 
     // Method to load the saved coin amount
@@ -55,7 +55,7 @@ public class CoinManager : MonoBehaviour
         }
         else
         {
-            Totalcoins = 0; 
+            Totalcoins = 0;
             SaveCoins();
         }
     }
